@@ -1,0 +1,81 @@
+/* 공통 부분 */
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul { list-style: none; }
+a { text-decoration: none; color : #0d0d0d; }
+#wrapper { width : 100%; margin: 0 auto; }
+.contentWrap { width : 1220px; padding : 0 15px; margin : 0 auto; }
+
+/* font 관련 */
+/*  Fonts : Founders -> Montserrat // Neausa -> Roboto Condensed */
+body { color : #0d0d0d; }
+.sectionTitle, h4, .goWithArrow { font-family: 'Roboto Condensed', sans-serif; }
+
+/* 전체 레이아웃 */
+/*  비주얼 페이지 */
+#header {
+    width : 100%;
+    height : 88px;
+    position : absolute;
+    z-index : 1000;
+    border : 1px dashed red;
+}
+#visualPage {
+    position : relative;
+    width : 100%;
+    height : 1080px;
+    overflow : hidden;
+}
+.mostBack {
+    position : absolute;
+    z-index : -9999;
+}
+.mostBack > img {
+    width : 100%;
+}
+.topVisual {
+    position : absolute;
+    width : 100%;
+    height : 1080px;
+    overflow : hidden;
+    border : 1px solid purple;
+}
+/* 질문 : 왜 원래 홈피는 height 1080인데 딱 떨어지고 제 건 남죠... */
+.mainContent {
+
+}
+
+
+/* header */
+/* 자리 잡기 */
+
+#header > .contentWrap { position : relative; }
+/* 로고 */
+.headerLogo {
+    position : absolute;
+    top : 26px;
+}
+/* 로고 외 요소들 자리 잡기 */
+.mainMenu, .langSearch {
+    font-family : 'Roboto Condensed', sans-serif;
+    font-weight : bold;
+    font-size : 14px;
+}
+.langSearch {
+    position : absolute;
+    right : 0;
+}
+.mainMenu > li, .langSearch > li {
+    cursor : pointer;
+    display : inline-block;
+    position : relative;
+}
+.aboutIceland, .aboutTrip, .aboutDestinations, .aboutInspiration, .langSearch > ul {
+    position : absolute;
+}
+.langSearch > li {
+    right : 0;
+}
