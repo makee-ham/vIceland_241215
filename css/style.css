@@ -8,11 +8,14 @@ ul { list-style: none; }
 a { text-decoration: none; color : #0d0d0d; }
 #wrapper { width : 100%; margin: 0 auto; }
 .contentWrap { width : 1220px; padding : 0 15px; margin : 0 auto; }
+img { vertical-align : middle; }
 
 /* font 관련 */
 /*  Fonts : Founders -> Montserrat // Neausa -> Roboto Condensed */
 body { color : #0d0d0d; }
 .sectionTitle, h4, .goWithArrow { font-family: 'Roboto Condensed', sans-serif; }
+.sectionTitle { font-size : 48px; }
+h4 { font-size : 18px; }
 
 /* 전체 레이아웃 */
 /*  비주얼 페이지 */
@@ -26,12 +29,15 @@ body { color : #0d0d0d; }
 #visualPage {
     position : relative;
     width : 100%;
-    height : 1080px;
+    height : 1000px;
     overflow : hidden;
 }
 .mostBack {
     position : absolute;
+	height : 1000px;
+	overflow : hidden;
     z-index : -9999;
+	top : -100px;
 }
 .mostBack > img {
     width : 100%;
@@ -39,18 +45,79 @@ body { color : #0d0d0d; }
 .topVisual {
     position : absolute;
     width : 100%;
-    height : 1080px;
+    height : 1000px;
     overflow : hidden;
-    border : 1px solid purple;
+	top : -100px;
 }
-/* 질문 : 왜 원래 홈피는 height 1080인데 딱 떨어지고 제 건 남죠... */
-.mainContent {
-
+.topVisual > img {
+	width : 100%;
+	position : absolute;
+	top : -75px;
 }
+/* 질문 : 왜 원래 홈피는 height 1080인데 딱 떨어지고 제 건 남죠... << JS로 offset height 준 거라 아직 못 함...*/
+/* 메인 콘텐츠; 섹션 사이 갭은 보통 75px */
+#mainContent {
+	margin-top : 75px;
+}
+.exploreIceland, .topics_left, .topics_right, .thingsToDo { margin-bottom : 75px; }
 
+/* exploreIceland */
+.exploreIcelandArticle {
+	width : 1220px;
+	margin-bottom : 52px;
+}
+.exploreIcelandArticle_S {
+	width : 406px;
+	height : 612px;
+}
+.exploreIcelandArticle_S img {
+	width : 376px;
+	height : 464px;
+	object-fit : cover;
+}
+.exploreIcelandArticle_M {
+	width : 814px;
+	height : 612px;
+}
+.exploreIcelandArticle_M img {
+	width : 782px;
+	height : 464px;
+	object-fit : cover;
+}
+.exploreIcelandArticle_L {
+	width : 1220px;
+	height : 578px;
+}
+.exploreIcelandArticle_L img {
+	width : 1190px;
+	height : 452px;
+	object-fit : cover;
+}
+.explore1 > .exploreIcelandArticle_S {
+	float : left;
+}
+.explore1 > .exploreIcelandArticle_M {
+	float : right;
+}
+.explore2 {
+	clear : both;
+}
+.explore3 > .exploreIcelandArticle_M {
+	float : left;
+}
+.explore3 > .exploreIcelandArticle_S {
+	float : right;
+}
+/* detailed topics */
+.topics_left {
+	width : 
+}
+.topics_right {
+	
+}
 
 /* header */
-/* 자리 잡기 */
+/* 헤더 자리 잡기 */
 
 #header > .contentWrap { position : relative; }
 /* 로고 */
