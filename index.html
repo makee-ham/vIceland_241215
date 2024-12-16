@@ -22,7 +22,7 @@
                 <nav>
                     <ul class="mainMenu">
                         <li>ABOUT ICELAND
-                            <ul class="aboutIceland">
+                            <ul class="subMenu">
                                 <li><a href="#">Safetravel</a></li>
                                 <li><a href="#">Visa Information</a></li>
                                 <li><a href="#">Geography Of Iceland</a></li>
@@ -34,7 +34,7 @@
                             </ul>
                         </li>
                         <li>PLAN YOUR TRIP
-                            <ul class="aboutTrip">
+                            <ul class="subMenu">
                                 <li><a href="#">How To Get There</a></li>
                                 <li><a href="#">Accommodation</a></li>
                                 <li><a href="#">Things To Do</a></li>
@@ -45,7 +45,7 @@
                             </ul>
                         </li>
                         <li>DESTINATIONS
-                            <ul class="aboutDestinations">
+                            <ul class="subMenu">
                                 <li><a href="#">The Regions</a></li>
                                 <li><a href="#">Scenic Routes</a></li>
                                 <li><a href="#">National Parks</a></li>
@@ -54,7 +54,7 @@
                             </ul>
                         </li>
                         <li>INSPIRATION
-                            <ul class="aboutInspiration">
+                            <ul class="subMenu">
                                 <li><a href="#">Adventure</a></li>
                                 <li><a href="#">Experience</a></li>
                                 <li><a href="#">Food And Beverages</a></li>
@@ -69,7 +69,7 @@
                 <!-- 언어선택과 검색 -->
                 <ul class="langSearch">
                     <li>EN
-                        <ul>
+                        <ul class="moreLang">
                             <li><a href="#">De</a></li>
                             <li><a href="#">Es</a></li>
                             <li><a href="#">Fr</a></li>
@@ -84,14 +84,14 @@
             <!-- 제일 뒤의 것들 -->
             <div class="mostBack">
                 <img src="images/ZfBN9EmNsf2sHhVg_Wellnessherosky.png" alt="">
-                <p>WELLNESS IN ICELAND</p>
             </div>
+			<p>WELLNESS IN ICELAND</p>
             <!-- 그 위 이미지 -->
             <div class="topVisual">
                 <img src="images/ZfBN-kmNsf2sHhVh_Wellnessheromiddle.png" alt="">
             </div>
             <!-- 제일 위 -->
-            <div class="contentWrap">
+            <div class="contentWrap visualWrap">
                 <p>
                     Iceland is a true haven of relaxation and rejuvenation, beckoning tired travelers from across the globe.
                 </p>
@@ -110,12 +110,16 @@
                     <!-- 첫 라인 -->
                 <article class="exploreIcelandArticle explore1">
                     <div class="exploreIcelandArticle_S"><a href="#">
-                        <img src="images/4007a9bd-142a-4bc8-8d62-2895238851b4_hvammsvik hot springs.png" alt="">
+                        <div class="imgFrame_S">
+							<img src="images/4007a9bd-142a-4bc8-8d62-2895238851b4_hvammsvik hot springs.png" alt="">
+						</div>
                         <h4>A DAY-TRIP FROM REYKJAVÍK: DISCOVER THE WHALE FJORD</h4>
                         <a href="#" class="goWithArrow">READ ARTICLE</a>
                     </a></div>
                     <div class="exploreIcelandArticle_M"><a href="#">
-                        <img src="images/ZyyRYK8jQArT0cYx_NorthernLights-SvalbarðseyrarvitiLighthouse_large2400x1600.png" alt="">
+                        <div class="imgFrame_M">
+							<img src="images/ZyyRYK8jQArT0cYx_NorthernLights-SvalbarðseyrarvitiLighthouse_large2400x1600.png" alt="">
+						</div>
                         <h4>NORTHERN LIGHTS AND THE COMING 'SOLAR MAXIMUM'</h4>
                         <a href="#" class="goWithArrow">READ ARTICLE</a>
                     </a></div>
@@ -123,7 +127,9 @@
                 <!-- 둘째 라인 -->
                 <article class="exploreIcelandArticle explore2">
                     <div class="exploreIcelandArticle_L"><a href="#">
-                        <img src="images/6754cc7a-0336-4457-a191-9e8d674103d0_Reykjavik_snow.png" alt="">
+						<div class="imgFrame_L">
+							<img src="images/6754cc7a-0336-4457-a191-9e8d674103d0_Reykjavik_snow.png" alt="">
+						</div>
                         <h4>CHRISTMAS IN ICELAND</h4>
                         <a href="#" class="goWithArrow">READ ARTICLE</a>
                     </a></div>
@@ -131,12 +137,16 @@
                 <!-- 막 라인 -->
                 <article class="exploreIcelandArticle explore3">
                     <div class="exploreIcelandArticle_M"><a href="#">
-                        <img src="images/ZyzSXq8jQArT0fiV_hoteljokulsarlon.png" alt="">
+                        <div class="imgFrame_M">
+							<img src="images/ZyzSXq8jQArT0fiV_hoteljokulsarlon.png" alt="">
+						</div>
                         <h4>NEW DESTINATIONS IN ICELAND 2025</h4>
                         <a href="#" class="goWithArrow">READ ARTICLE</a>
                     </a></div>
                     <div class="exploreIcelandArticle_S"><a href="#">
-                        <img src="images/Zz2roa8jQArT1D7H_ForestLagoon_large2400x1600.png" alt="">
+                        <div class="imgFrame_S">
+							<img src="images/Zz2roa8jQArT1D7H_ForestLagoon_large2400x1600.png" alt="">
+						</div>
                         <h4>WELLNESS: THE HEALING FORCE OF WINTER</h4>
                         <a href="#" class="goWithArrow">READ ARTICLE</a>
                     </a></div>
@@ -157,7 +167,7 @@
                     </div>
                 </article>
                 <!-- The Volcanic Way -->
-                <article class="topics_rignt">
+                <article class="topics_right">
                     <div class="topicsImg">
                         <img src="images/ZoUl2x5LeNNTwvz0_20210719_THRAINN_254860_Volcanic_way.png" alt="">
                     </div>
@@ -179,61 +189,63 @@
                     </div>
                 </article>
             </section>
-            <!-- S3. Looking For Things To Do> -->
+            <!-- S3. Looking For Things To Do? -->
             <section class="thingsToDo">
                 <div>
                     <h1 class="sectionTitle">LOOKING FOR THINGS TO DO?</h1>
                     <a href="#" class="goWithArrow">FIND MORE THINGS TO DO</a>
                 </div>
+				<div class="cardSection">
                 <!-- 첫 카드 -->
-                <div class="toDoCards"><a href="#">
-                    <img src="images/zoriw2mpscpcyb62n7bt.webp" alt="">
-                    <img src="images/download (8).png" alt="">
-                    <h4>DIVE.IS</h4>
-                    <p class="toDoLocation">Hólmaslóð 2</p>
-                    <p class="toDoDetail">
-                        DIVE.IS is a dive center formed in 1997 and offered various diving courses. In early 2000's the company started offering both diving and snorkelingtours on daily basis to many sites close to the city.
-                    </p>
-                    <p class="toDoUrl">www.dive.is/is</p>
-                </a></div>
-                <!-- 둘째 카드 -->
-                <div class="toDoCards"><a href="#">
-                    <img src="images/fhl5eiku7usgrtybibdy.jpg" alt="">
-                    <img src="images/download (8).png" alt="">
-                    <h4>ENTERPRICE RENT-A-CAR</h4>
-                    <p class="toDoLocation">Klettagarðar 12</p>
-                    <p class="toDoDetail">
-                        Enterprise offers a wide selection of rental cars for both short term and long term rent, focusing on expanding its award-winning customer service as well as customer and employee satisfaction.
-                    </p>
-                    <p class="toDoUrl">www.enterpriserentacar.is</p>
-                </a></div>
-                <!-- 셋째 카드 -->
-                <div class="toDoCards"><a href="#">
-                    <img src="images/d608dc284e33e4da1dbca3d889f5b767.webp" alt="">
-                    <img src="images/download (8).png" alt="">
-                    <h4>STEPMAN.IS</h4>
-                    <p class="toDoLocation">Dynjandi</p>
-                    <p class="toDoDetail">
-                        stepman is Stephan Mantler, AIMG certified glacier and mountain guide, member of the Icelandic search and rescue team, and former professional photographer with over 30 years of experience exploring the outdoors.
-                    </p>
-                    <p class="toDoUrl">www.stepman.is</p>
-                </a></div>
-                <!-- 막 카드 -->
-                <div class="toDoCards"><a href="#">
-                    <img src="images/bklvcma72vzdfbcc0deo.jpg" alt="">
-                    <img src="images/download (8).png" alt="">
-                    <h4>SKY LAGOON</h4>
-                    <p class="toDoLocation">Vesturvör 44</p>
-                    <p class="toDoDetail">
-                        Minutes from downtown Reykjavík, a thermal spa inspired by nature & culture. Authentic Icelandic culture meets nature’s awe-inspiring beauty.
-                    </p>
-                    <p class="toDoUrl">www.skylagoon.com</p>
-                </a></div>
+					<div class="toDoCards"><a href="#">
+						<img class="cardImage" src="images/zoriw2mpscpcyb62n7bt.webp" alt="">
+						<img class="cardTag" src="images/download (8).png" alt="">
+						<h4>DIVE.IS</h4>
+						<p class="toDoLocation">Hólmaslóð 2</p>
+						<p class="toDoDetail">
+							DIVE.IS is a dive center formed in 1997 and offered various diving courses. In early 2000's the company started offering both diving and snorkelingtours on daily basis to many sites close to the city.
+						</p>
+						<p class="toDoUrl">www.dive.is/is</p>
+					</a></div>
+					<!-- 둘째 카드 -->
+					<div class="toDoCards"><a href="#">
+						<img class="cardImage" src="images/fhl5eiku7usgrtybibdy.jpg" alt="">
+						<img class="cardTag" src="images/download (8).png" alt="">
+						<h4>ENTERPRICE RENT-A-CAR</h4>
+						<p class="toDoLocation">Klettagarðar 12</p>
+						<p class="toDoDetail">
+							Enterprise offers a wide selection of rental cars for both short term and long term rent, focusing on expanding its award-winning customer service as well as customer and employee satisfaction.
+						</p>
+						<p class="toDoUrl">www.enterpriserentacar.is</p>
+					</a></div>
+					<!-- 셋째 카드 -->
+					<div class="toDoCards"><a href="#">
+						<img class="cardImage" src="images/d608dc284e33e4da1dbca3d889f5b767.webp" alt="">
+						<img class="cardTag" src="images/download (8).png" alt="">
+						<h4>STEPMAN.IS</h4>
+						<p class="toDoLocation">Dynjandi</p>
+						<p class="toDoDetail">
+							stepman is Stephan Mantler, AIMG certified glacier and mountain guide, member of the Icelandic search and rescue team, and former professional photographer with over 30 years of experience exploring the outdoors.
+						</p>
+						<p class="toDoUrl">www.stepman.is</p>
+					</a></div>
+					<!-- 막 카드 -->
+					<div class="toDoCards"><a href="#">
+						<img class="cardImage" src="images/bklvcma72vzdfbcc0deo.jpg" alt="">
+						<img class="cardTag" src="images/download (8).png" alt="">
+						<h4>SKY LAGOON</h4>
+						<p class="toDoLocation">Vesturvör 44</p>
+						<p class="toDoDetail">
+							Minutes from downtown Reykjavík, a thermal spa inspired by nature & culture. Authentic Icelandic culture meets nature’s awe-inspiring beauty.
+						</p>
+						<p class="toDoUrl">www.skylagoon.com</p>
+					</a></div>
+				</div>
             </section>
             <!-- S4. Detailed Topics 2 -->
             <section class="detailedTopics">
                 <!-- Wellness in Iceland -->
-                <article class="topics_rignt">
+                <article class="topics_right">
                     <div class="topicsImg">
                         <img src="images/c80275dc-00ba-48e7-b87e-8d4fffd092f5_Sky_Lagoon_Birting_1_IAV-copy_x-large4800x3200.png" alt="">
                     </div>
@@ -261,7 +273,7 @@
             <!-- 배경 이미지 -->
             <img src="images/Zyy2Va8jQArT0d4r_PostlistSignupBackgroundImage.png" alt="">
             <!-- 그 위의 요소들 -->
-            <div class="contentWrap">
+            <div class="contentWrap insightsWrap">
                 <h1 class="sectionTitle whiteTitle">GET MORE INSIGHTS</h1>
                 <p>Sign up for our mailing list</p>
                 <form name="newsletterForm" id="newsletterForm" action="" method="post">
@@ -288,7 +300,7 @@
         </section>
         <!-- footer -->
         <footer id="footer">  <!-- 가로 꽉 차게, 안에 wrap -->
-            <div class="contentWrap">
+            <div class="contentWrap footerWrap">
                 <!-- logo & copyright -->
                 <div class="logoCopy">
                     <h1 class="footerLogo"><a href="index.html"><img src="images/download (5).png" alt="logo"></a></h1>

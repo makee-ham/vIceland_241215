@@ -16,6 +16,9 @@ body { color : #0d0d0d; }
 .sectionTitle, h4, .goWithArrow { font-family: 'Roboto Condensed', sans-serif; }
 .sectionTitle { font-size : 48px; }
 h4 { font-size : 18px; }
+.contentWrap p { font-family : Montserrat, sans-serif; }
+.topicsButton, .logoCopy > p, .visitIceland > ul > li > a, .relevantWebsites > ul > li > a { font-family : 'Roboto Condensed', sans-serif; font-weight : bold; }
+.followUs > p { font-family : Montserrat, sans-serif; font-weight : bold; }
 
 /* 전체 레이아웃 */
 /*  비주얼 페이지 */
@@ -24,7 +27,6 @@ h4 { font-size : 18px; }
     height : 88px;
     position : absolute;
     z-index : 1000;
-    border : 1px dashed red;
 }
 #visualPage {
     position : relative;
@@ -36,17 +38,19 @@ h4 { font-size : 18px; }
     position : absolute;
 	height : 1000px;
 	overflow : hidden;
-    z-index : -9999;
 	top : -100px;
+	z-index : -9999;
 }
 .mostBack > img {
     width : 100%;
+	z-index : -1000;
 }
 .topVisual {
     position : absolute;
     width : 100%;
-    height : 1000px;
+    height : 1020px;
     overflow : hidden;
+	z-index : 10;
 	top : -100px;
 }
 .topVisual > img {
@@ -59,9 +63,11 @@ h4 { font-size : 18px; }
 #mainContent {
 	margin-top : 75px;
 }
-.exploreIceland, .topics_left, .topics_right, .thingsToDo { margin-bottom : 75px; }
+.exploreIceland, .getInsights { margin-top : 75px; }
+.topics_left, .topics_right { padding-top: 75px; box-sizing : border-box; }
+.thingsToDo { margin-top : 150px; margin-bottom : 75px; }
 
-/* exploreIceland */
+/* exploreIceland 레이아웃 */
 .exploreIcelandArticle {
 	width : 1220px;
 	margin-bottom : 52px;
@@ -70,28 +76,49 @@ h4 { font-size : 18px; }
 	width : 406px;
 	height : 612px;
 }
+.imgFrame_S {
+	width : 376px;
+	height : 464px;
+	overflow: hidden;
+	position : relative;
+}
 .exploreIcelandArticle_S img {
 	width : 376px;
 	height : 464px;
 	object-fit : cover;
+	transition : transform .5s ease;
 }
 .exploreIcelandArticle_M {
 	width : 814px;
 	height : 612px;
 }
+.imgFrame_M {
+	width : 782px;
+	height : 464px;
+	overflow: hidden;
+	position : relative;
+}
 .exploreIcelandArticle_M img {
 	width : 782px;
 	height : 464px;
 	object-fit : cover;
+	transition : transform .5s ease;
 }
 .exploreIcelandArticle_L {
 	width : 1220px;
-	height : 578px;
+	height : 524px;
+}
+.imgFrame_L {
+	width : 1190px;
+	height : 452px;
+	overflow: hidden;
+	position : relative;
 }
 .exploreIcelandArticle_L img {
 	width : 1190px;
 	height : 452px;
 	object-fit : cover;
+	transition : transform .5s ease;
 }
 .explore1 > .exploreIcelandArticle_S {
 	float : left;
@@ -108,22 +135,90 @@ h4 { font-size : 18px; }
 .explore3 > .exploreIcelandArticle_S {
 	float : right;
 }
-/* detailed topics */
-.topics_left {
-	width : 
+/* detailed topics 레이아웃 */
+.detailedTopics { overflow : hidden; }
+.topics_left, topics_right {
+	width : 1220px;
+	overflow : hidden;
 }
-.topics_right {
-	
+.topics_left:after, topics_right:after {
+	content : "";
+	display : block;
+	clean : both;
+}
+.topics_left > .topicsImg { float : left; }
+.topics_left > .topicsText { float : right; }
+.topics_right > .topicsImg { float : right; }
+.topics_right > .topicsText { float : left; }
+.topicsImg {
+	width : 580px;
+	height : 520px;
+	line-height : 520px;
+	text-align : center;
+}
+.topicsImg > img {
+	width : 100%;
+	height : 100%;
+	object-fit : cover;
+	border-radius : 5px;
+}
+.topicsText {
+	width : 508px;
+	height : 520px;
+	padding : 36px 0;
+}
+/* Looking For Things To Do 레이아웃 */
+.cardSection {
+	display : flex;
+	justify-content: space-between;
+}
+.toDoCards {
+	width : 284px;
+	height : 400px;
+	padding : 18px;
+	border : 1px solid #000;
+	border-radius : 5px;
+}
+.cardImage {
+	width : 100%;
+	height : 150px;
+	object-fit : cover;
+	border-radius : 5px;
+}
+/* Get More Insights 레이아웃 */
+.getInsights { height : 655px; }
+.getInsights > img {
+	width : 100%;
+	height : 655px;
+	object-fit : cover;
+	z-index : -1000;
+}
+.insightsWrap {
+	width : 1190px;
+	height : 655px;
+	padding : 144px 0;
+	position : relative;
+	top : -620px;
+}
+/* footer 레이아웃 */
+#footer {
+	width : 100%;
+	height : 400px;
+}
+.footerWrap {
+	position : relative;
+	padding : 58px 0 0;
 }
 
+
+/* 디테일 CSS 시작 */
 /* header */
 /* 헤더 자리 잡기 */
-
 #header > .contentWrap { position : relative; }
 /* 로고 */
 .headerLogo {
     position : absolute;
-    top : 26px;
+    top : 16px;
 }
 /* 로고 외 요소들 자리 잡기 */
 .mainMenu, .langSearch {
@@ -134,15 +229,288 @@ h4 { font-size : 18px; }
 .langSearch {
     position : absolute;
     right : 0;
+	text-align : center;
 }
 .mainMenu > li, .langSearch > li {
     cursor : pointer;
     display : inline-block;
     position : relative;
+	text-align : center;
+	padding : 34px 10px;
 }
-.aboutIceland, .aboutTrip, .aboutDestinations, .aboutInspiration, .langSearch > ul {
+.subMenu, .moreLang {
     position : absolute;
+	text-align : left;
 }
 .langSearch > li {
     right : 0;
+}
+/* 메인 메뉴 */
+.mainMenu {
+	position : absolute;
+	left : 300px;
+	top : 0;
+}
+.mainMenu > li:after {
+	content : "";
+	display : inline-block;
+	width : 8px;
+	height : 8px;
+	background : url(../images/download15.png) no-repeat;
+	background-size : contain;
+	margin-left : 8px;
+	margin-right : 20px;
+}
+.subMenu {
+	width : 200px;
+	top : 87px;
+	left : -5px;
+	border-radius : 8px;
+	background-color : #fff;
+	box-shadow : 1px 2px 10px rgba(0,0,0,0.2);
+	display : none;
+}
+.subMenu > li {
+	padding : 16px;
+	border-bottom : 1px solid rgba(3,3,3,0.1);
+}
+.subMenu > li:first-child {
+	border-radius : 8px 8px 0 0;
+}
+.subMenu > li:last-child {
+	border-radius : 0 0 8px 8px;
+	border-bottom : none;
+}
+.subMenu > li:hover {
+	background-color : #eee;
+}
+/* 질문 : 왜 메인메뉴 호버하면 쀽쀽 밑으로 내려가고 언어선택은 안 그러한가? */
+.mainMenu > li:hover {
+	border-top : 2px solid #666;
+}
+.mainMenu > li:hover > .subMenu {
+	display : block;
+}
+/* 언어선택과 검색 */
+.langSearch {
+	top : 0;
+}
+.langSearch > li:first-child:after {
+	content : "";
+	display : inline-block;
+	width : 8px;
+	height : 8px;
+	background : url(../images/download15.png) no-repeat;
+	background-size : contain;
+	margin-left : 8px;
+}
+.moreLang {
+	width : 80px;
+	top : 84px;
+	left : -5px;
+	border-radius : 8px;
+	background-color : #fff;
+	box-shadow : 1px 2px 10px rgba(0,0,0,0.2);
+	display : none;
+}
+.moreLang > li {
+	padding : 16px;
+	border-bottom : 1px solid rgba(3,3,3,0.1);
+}
+.moreLang > li:first-child { border-radius : 8px 8px 0 0; }
+.moreLang > li:last-child {
+	border-radius : 0 0 8px 8px;
+	border-bottom : none;
+}
+.langSearch > li:first-child:hover {
+	border-top : 2px solid #666;
+}
+.langSearch > li:first-child:hover > .moreLang {
+	display : block;
+}
+.moreLang li:hover {
+	background-color : #eee;
+}
+/* 비주얼 페이지 */
+/* 제일 뒤의 것들 */
+#visualPage > p {
+	color : #fff;
+	letter-spacing : -4px;
+	font-size : 80px;
+	font-weight : bold;
+	z-index : 1;
+	position : absolute;
+	left : 600px;
+	top : 120px;
+	text-shadow : 2px 6px 10px rgba(0,0,0,0.2);
+}
+.visualWrap {
+	position : relative;
+	z-index : 1000;
+	top : 560px;
+}
+.visualWrap > p {
+	color : #fff;
+	font-size : 24px;
+	font-weight : bold;
+	width : 900px;
+	line-height : 160%;
+}
+.visualWrap > a {
+	font-size : 14px;
+	font-weight : bold;
+	color : #fff;
+	display : inline-block;
+	width : 180px;
+	padding : 16px 20px;
+	border-radius : 8px;
+	background-color : #0d0d0d;
+	position : relative;
+	margin-top : 32px;
+}
+.visualWrap > a:after {
+	content : "";
+	display : inline-block;
+	width : 19px;
+	height : 14px;
+	background : url(../images/download14w.png) no-repeat;
+	background-size : 19px 14px;
+	position : absolute;
+	right : 20px;
+	top : 18px;
+}
+.visualWrap > a:hover {
+	background-color : #333;
+}
+/* S1. Explore Iceland */
+.exploreIceland > div > p {
+	font-size : 24px;
+	line-height : 160%;
+	margin-bottom : 16px;
+}
+
+/* .goWithArrow : 모양만 일단 잡기, 위치는 따로 */
+.goWithArrow {
+	display : inline-block;
+	font-size : 14px;
+	font-weight : bold;
+	box-sizing : border-box;
+}
+.goWithArrow:after {
+	content : "";
+	display : inline-block;
+	width : 19px;
+	height : 14px;
+	background : url(../images/download14b.png) no-repeat;
+	background-size : 19px 14px;
+	margin-left : 10px;
+	position : relative;
+	top : 2px;
+}
+.goWithArrow:hover {
+	text-decoration : underline #0d0d0d;
+	text-underline-offset: 4px;
+}
+/* .goWithArrow 끝 */
+
+/* 이어서 다시 S1 */
+.exploreIceland > div > a {
+	position : relative;
+	left : 1114px;
+	top : -46px;
+}
+.exploreIceland h4 {
+	margin-top : 16px;
+	margin-bottom : 4px;
+}
+.exploreIcelandArticle_S h4 {
+	width : 376px;
+}
+/* 질문 : 맨끝의 a에 올려도 이미지 커져야 하는데 왜 안 커지죠... */
+.exploreIcelandArticle > div a:hover img {
+	transform : scale(1.1);
+}
+.explore3:after {
+	content : "";
+	display : block;
+	clear : both;
+}
+/* S2. Detailed Topics 1 */
+.topicsText > h1 {
+	margin-bottom : 24px;
+	width : 480px;
+}
+.topicsText > p {
+	width : 480px;
+	line-height : 160%;
+	margin-bottom : 24px;
+}
+.topicsButton {
+	font-size : 14px;
+	padding : 16px;
+	border : 1px solid #0d0d0d;
+	border-radius : 5px;
+	position : relative;
+	top : 24px;
+}
+.topicsButton:hover {
+	background-color : #333;
+	color : #fff;
+}
+
+/* S3. Looking For Things To Do? */
+.thingsToDo > div:first-child > a {
+	position : relative;
+	left : 1010px;
+	top : -26px;
+}
+.toDoCards { position : relative; cursor:pointer; }
+.cardTag {
+	width : 30px;
+	height : 30px;
+	position : absolute;
+	left : 6px;
+	top : 6px;
+}
+.toDoCards > a > h4 { margin-top : 16px; }
+.toDoLocation { font-size : 18px; line-height : 160%; }
+.toDoDetail {
+	font-size : 14px;
+	line-height : 150%;
+	/* memo : n줄까지만 보이게 하기 */
+	/* 질문 : 그런데 이거 각 코드 기능이 뭐예요...? */
+	width : 100%;
+	text-overflow: ellipsis;
+	overflow : hidden;
+	word-break: break-word;
+	display: -webkit-box;
+   -webkit-line-clamp: 3; /* 원하는 라인수 */
+   -webkit-box-orient: vertical;
+}
+.toDoUrl {
+	font-size : 14px;
+	position : absolute;
+	bottom : 18px;
+}
+.toDoCards:hover {
+	background-color : #eee;
+}
+/* S5. Get More Insights */
+.insightsWrap { color : #fff; }
+.insightsWrap > p {
+	line-height : 160%;
+	font-size : 18px;
+}
+#newsletterForm > p { margin-top : 32px; }
+.insightsWrap > form label, .insightsWrap > form button {
+	font-family : 'Roboto Condensed', sans-serif;
+}
+.insightsWrap > form label:last-of-type {
+	font-family : Montserrat, sans-serif;
+	font-size : 14px;
+	font-weight : bold;
+}
+.insightsWrap > form label:last-child > a {
+	color : #fff;
+	text-decoration : underline;
 }
