@@ -198,16 +198,12 @@ h4 { font-size : 18px; }
 	height : 655px;
 	padding : 144px 0;
 	position : relative;
-	top : -620px;
+	top : -650px;
 }
 /* footer 레이아웃 */
 #footer {
 	width : 100%;
-	height : 400px;
-}
-.footerWrap {
-	position : relative;
-	padding : 58px 0 0;
+	height : 340px;
 }
 
 
@@ -408,7 +404,7 @@ h4 { font-size : 18px; }
 	top : 2px;
 }
 .goWithArrow:hover {
-	text-decoration : underline #0d0d0d;
+	text-decoration : underline #0d0d0d solid 2px;
 	text-underline-offset: 4px;
 }
 /* .goWithArrow 끝 */
@@ -502,15 +498,121 @@ h4 { font-size : 18px; }
 	font-size : 18px;
 }
 #newsletterForm > p { margin-top : 32px; }
-.insightsWrap > form label, .insightsWrap > form button {
+#newsletterForm > p:first-child, #newsletterForm > p:nth-child(2) { display : inline-block; }
+#newsletterForm label { display : block; }
+#newsletterForm > p:first-child > label, #newsletterForm > p:nth-child(2) > label { font-weight : normal; }
+#newsletterForm > p:first-child > label, #newsletterForm > p:nth-child(2) > label, #newsletterForm button {
 	font-family : 'Roboto Condensed', sans-serif;
 }
-.insightsWrap > form label:last-of-type {
+#newsletterForm label:last-of-type {
 	font-family : Montserrat, sans-serif;
 	font-size : 14px;
 	font-weight : bold;
 }
-.insightsWrap > form label:last-child > a {
+#newsletterForm label:last-child > a {
 	color : #fff;
 	text-decoration : underline;
+}
+#userName {
+	width : 263px;
+	height : 50px;
+	padding : 1px 2px 1px 15px;
+	margin-top: 8px;
+	border : 1px solid #000;
+	border-radius : 5px;
+	outline : none;
+	margin-right: 18px;
+}
+#userEmail {
+	width : 263px;
+	height : 50px;
+	padding : 1px 2px 1px 15px;
+	margin-top: 8px;
+	border : 1px solid #000;
+	border-radius : 5px;
+	outline : none;
+}
+.largerCheckbox {
+	width : 20px;
+	height : 20px;
+	padding : 2px;
+	border-radius : 10px;
+	display : inline-block;
+}
+#newsletterForm > p:nth-child(3) > label {
+	display : inline-block;
+	position : relative;
+	left : 16px;
+	top : 10px;
+	line-height: 140%;
+}
+#newsletterForm button {
+	font-size : 14px;
+	font-weight : bold;
+	color : #fff;
+	width : 88px;
+	height : 50px;
+	padding : 0 20px;
+	border-radius : 5px;
+	border : 1px solid #fff;
+	background-color: transparent;
+	cursor: pointer;
+	position : relative;
+	top : 16px;
+}
+#newsletterForm button:hover {
+	background-color : rgba(150,150,150,0.6);
+}
+
+/* footer */
+.footerWrap {
+	margin-top : 58px;
+	position : relative;
+}
+.logoCopy > p {
+	font-weight : normal;
+	margin-top : 32px;
+}
+.visitIceland {
+	position : absolute;
+	top : 0;
+	left : 320px;
+}
+.relevantWebsites {
+	position: absolute;
+	top: 0;
+	left: 510px;
+}
+.followUs {
+	position : absolute;
+	top : 0;
+	left : 900px;
+}
+.visitIceland > ul {
+	width : 140px;
+	margin-top : 24px;
+}
+.visitIceland > ul li { line-height : 160%; }
+.visitIceland > ul li a { font-weight : normal; }
+.visitIceland > ul li a:hover {
+	text-decoration : underline #3d728f solid 3px;
+	text-underline-offset: 4px;
+}
+.relevantWebsites > ul {
+	width : 160px;
+	margin-top : 24px;
+}
+.relevantWebsites > ul li { line-height : 160%; }
+.relevantWebsites > ul li a { font-weight : normal; }
+.relevantWebsites > ul li a:hover {
+	text-decoration : underline #3d728f solid 3px;
+	text-underline-offset: 4px;
+}
+.snsIcons {
+	position : relative;
+	top : 6px;
+}
+.snsIcons > li {
+	display : inline-block;
+	padding-right : 12px;
 }
