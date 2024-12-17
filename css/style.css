@@ -281,8 +281,21 @@ h4 { font-size : 18px; }
 	background-color : #eee;
 }
 /* 질문 : 왜 메인메뉴 호버하면 쀽쀽 밑으로 내려가고 언어선택은 안 그러한가? */
+/*
 .mainMenu > li:hover {
 	border-top : 2px solid #666;
+}
+*/
+.mainMenu > li {
+	position : relative;
+}
+.mainMenu > li:hover:before {
+	position : absolute;
+	top : 0;
+	width : 120px;
+	height : 2px;
+	content : "";
+	background-color : #666;
 }
 .mainMenu > li:hover > .subMenu {
 	display : block;
@@ -423,7 +436,7 @@ h4 { font-size : 18px; }
 	width : 376px;
 }
 /* 질문 : 맨끝의 a에 올려도 이미지 커져야 하는데 왜 안 커지죠... */
-.exploreIcelandArticle > div a:hover img {
+.exploreIcelandArticle > div:hover img {
 	transform : scale(1.1);
 }
 .explore3:after {
